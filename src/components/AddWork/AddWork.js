@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import './AddWork.css'
 
 const AddWork = () => {
+    const [box, setBox] = useState('');
 
     const { register, handleSubmit } = useForm();
     const onSubmit = data => {
         console.log(data)
+        setBox(data.checkbox)
+
         // const url = `https://my-final-project115.herokuapp.com/tools`;
         // fetch(url, {
         //     method: 'POST',
@@ -27,6 +30,10 @@ const AddWork = () => {
         //         }
 
         //     })
+
+        if (box === false) {
+            alert('please agree conditions')
+        }
     };
 
     return (
@@ -37,6 +44,7 @@ const AddWork = () => {
                     <input className='input input-bordered' type="text" placeholder='name' {...register("name")} />
                     <input className='input input-bordered' type="text" placeholder='image URL' {...register("img")} />
                     <input className='input input-bordered' type="text" placeholder='description' {...register("description")} />
+                    <p>Remeber Me</p>
                     <input className='' type="checkbox" {...register("checkbox")} />
                     <input className='btn btn-secondery' type="submit" value="submit" />
                 </form>
