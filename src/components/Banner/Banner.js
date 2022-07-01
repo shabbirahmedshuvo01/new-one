@@ -1,4 +1,5 @@
 import React from 'react';
+import DailyTasks from '../DailyTasks/DailyTasks';
 
 const Banner = () => {
     return (
@@ -12,6 +13,9 @@ const Banner = () => {
                         <button className="btn btn-primary">See others</button>
                     </div>
                 </div>
+            </div>
+            <div>
+                <DailyTasks></DailyTasks>
             </div>
         </div>
     );

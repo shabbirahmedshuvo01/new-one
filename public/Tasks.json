@@ -10,5 +10,11 @@
         "name": "Part-time",
         "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGm89KIcFzQzYT9yq0hL_yIfh0yngbfsQ1xQ&usqp=CAU",
         "description": "A typical simple screwdriver has a handle and a shaft, ending in a tip the user puts into the screw head before turning the handle."
+    },
+    {
+        "_id": 3,
+        "name": "Part-time",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGm89KIcFzQzYT9yq0hL_yIfh0yngbfsQ1xQ&usqp=CAU",
+        "description": "A typical simple screwdriver has a handle and a shaft, ending in a tip the user puts into the screw head before turning the handle."
     }
 ]

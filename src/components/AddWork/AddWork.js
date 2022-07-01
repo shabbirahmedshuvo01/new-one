@@ -1,5 +1,6 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import './AddWork.css'
 
 const AddWork = () => {
 
@@ -29,14 +30,16 @@ const AddWork = () => {
     };
 
     return (
-        <div className='w-50 mx-80'>
-            <h2 className="text-2xl pl-20 font-bold mt-5">Add New Items</h2>
-            <form className='flex flex-col w-80 mt-10 gap-2' onSubmit={handleSubmit(onSubmit)}>
-                <input className='input input-bordered' type="text" placeholder='name' {...register("name")} />
-                <input className='input input-bordered' type="text" placeholder='image URL' {...register("img")} />
-                <input className='input input-bordered' type="text" placeholder='description' {...register("description")} />
-                <input className='btn btn-secondery' type="submit" value="submit" />
-            </form>
+        <div className=''>
+            <h2 className="text-2xl text-center font-bold mt-5">Add New Items</h2>
+            <div className='w-50 from-work'>
+                <form className='flex flex-col w-80 mt-10 gap-2' onSubmit={handleSubmit(onSubmit)}>
+                    <input className='input input-bordered' type="text" placeholder='name' {...register("name")} />
+                    <input className='input input-bordered' type="text" placeholder='image URL' {...register("img")} />
+                    <input className='input input-bordered' type="text" placeholder='description' {...register("description")} />
+                    <input className='btn btn-secondery' type="submit" value="submit" />
+                </form>
+            </div>
         </div>
     );
 };
