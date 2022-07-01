@@ -1,17 +1,18 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Works from './Works';
 
 const DailyTasks = () => {
 
     const [tasks, setTask] = useState([]);
 
-    const url = `https://new-onework.herokuapp.com/task`;
 
-    fetch(url)
-        .then(res => res.json())
-        .then(data => setTask(data))
+    useEffect(() => {
+        fetch('https://new-onework.herokuapp.com/task')
+            .then(res => res.json())
+            .then(data => setTask(data));
+    }, [])
 
-    // console.log(task)
+    console.log(tasks)
 
     return (
         <div className='mt-20'>
