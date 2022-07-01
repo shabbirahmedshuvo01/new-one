@@ -37,6 +37,7 @@ const AddWork = () => {
                     <input className='input input-bordered' type="text" placeholder='name' {...register("name")} />
                     <input className='input input-bordered' type="text" placeholder='image URL' {...register("img")} />
                     <input className='input input-bordered' type="text" placeholder='description' {...register("description")} />
+                    <input className='' type="checkbox" {...register("checkbox")} />
                     <input className='btn btn-secondery' type="submit" value="submit" />
                 </form>
             </div>

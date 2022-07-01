@@ -4,7 +4,7 @@ import 'react-day-picker/dist/style.css';
 
 const Calendar = () => {
     return (
-        <div className='ml-20'>
+        <div className='ml-80'>
             <DayPicker />;
         </div>
     );
