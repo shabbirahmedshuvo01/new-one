@@ -5,7 +5,7 @@ const DailyTasks = () => {
 
     const [tasks, settask] = useState([]);
 
-    fetch('Tasks.json')
+    fetch('http://localhost:5000/task')
         .then(res => res.json())
         .then(data => settask(data))
 

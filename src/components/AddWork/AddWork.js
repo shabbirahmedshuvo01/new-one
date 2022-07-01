@@ -10,26 +10,26 @@ const AddWork = () => {
         console.log(data)
         setBox(data.checkbox)
 
-        // const url = `https://my-final-project115.herokuapp.com/tools`;
-        // fetch(url, {
-        //     method: 'POST',
-        //     headers: {
-        //         'content-type': 'application/json'
-        //     },
-        //     body: JSON.stringify(data)
-        // })
-        //     .then(res => res.json())
-        //     .then(result => {
-        //         console.log("result", result)
+        const url = `http://localhost:5000/task`;
+        fetch(url, {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+            .then(res => res.json())
+            .then(result => {
+                console.log("result", result)
 
-        //         if (result.acknowledged) {
-        //             alert('add item done')
-        //         }
-        //         else {
-        //             alert('failed to add')
-        //         }
+                if (result.acknowledged) {
+                    alert('add item done')
+                }
+                else {
+                    alert('failed to add')
+                }
 
-        //     })
+            })
 
         if (box === false) {
             alert('please agree conditions')
