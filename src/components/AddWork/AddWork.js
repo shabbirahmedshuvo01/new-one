@@ -10,7 +10,7 @@ const AddWork = () => {
         console.log(data)
         setBox(data.checkbox)
 
-        const url = `http://localhost:5000/task`;
+        const url = `https://new-onework.herokuapp.com/task`;
         fetch(url, {
             method: 'POST',
             headers: {

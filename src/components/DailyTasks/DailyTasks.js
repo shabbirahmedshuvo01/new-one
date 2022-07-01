@@ -3,11 +3,13 @@ import Works from './Works';
 
 const DailyTasks = () => {
 
-    const [tasks, settask] = useState([]);
+    const [tasks, setTask] = useState([]);
 
-    fetch('http://localhost:5000/task')
+    const url = `https://new-onework.herokuapp.com/task`;
+
+    fetch(url)
         .then(res => res.json())
-        .then(data => settask(data))
+        .then(data => setTask(data))
 
     // console.log(task)
 
